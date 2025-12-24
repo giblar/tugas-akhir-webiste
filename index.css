@@ -44,7 +44,6 @@ body {
 
 #header-group p {
   color: #EFEFEA;
-  
   font-size: 2rem;
 }
 
@@ -62,28 +61,39 @@ body {
 @media (max-width: 900px) {
   #header-group {
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     text-align: center;
-    
+    justify-content: flex-start;
+    height: auto; 
+    padding: 2rem 1rem;
+    gap: 1.5rem; 
   }
 
   #header-group img {
     width: 20rem;
     height: auto;
-
+    margin-bottom: 1rem; 
+    animation: none; 
   }
 
   .header-text-group {
     width: 100%;
     padding-left: 0;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem; /* jarak antar teks */
   }
 
   #header-group h1 {
     font-size: 3rem;
+    line-height: 1.1;
   }
 
   #header-group p {
     font-size: 1rem;
+    margin-top: 0.5rem;
   }
 }
 
@@ -115,31 +125,40 @@ body {
   width: 50rem;
 }
 
+
 /* Responsive - ABOUT */
 @media (max-width: 900px) {
   #about {
+
     flex-direction: column;
     padding: 2rem;
     text-align: center;
+    justify-content: center; 
+    gap: 1.5rem; 
   }
 
   #about img {
     width: 23rem;
-    margin-top: 2rem;
+    margin-top: 1rem; 
   }
 
   #about h1 {
     font-size: 3rem;
+    margin-bottom: 0.5rem; 
   }
 
   #about p {
     font-size: 1.2rem;
     width: 100%;
+    margin: 0 auto;
   }
+
   #about .text-container {
-  width: 90%;
+    width: 90%;
+    margin: 0 auto; 
+  }
 }
-}
+
 
 /* ==================== TEAM SECTION ==================== */
 #team-section {
@@ -156,9 +175,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: #fff; */
   height: fit-content;
-  padding-top: 3.7rem; /* kasih ruang buat si orang duduk */
+  padding-top: 3.7rem; 
 }
 
 .text-header h1 {
@@ -172,18 +190,18 @@ body {
   z-index: 1;
 }
 
-/* Gambar orang duduk */
+
 .text-header .sit {
   position: absolute;
   top: 0;
-  right: 20%; /* ubah ini buat geser posisi horizontal */
-  width: 12rem;
+  right: 0%; 
+  width: 16rem;
   height: auto;
-  transform: translateY(-40%); /* biar seolah duduk di atas h1 */
+  transform: translateY(-50%); 
   z-index: 2;
 }
 
-/* Responsive */
+
 @media (max-width: 900px) {
   .text-header h1 {
     font-size: 1rem;
@@ -270,7 +288,7 @@ body {
   margin: 0;
 }
 
-/* Responsive - TEAM */
+
 @media (max-width: 900px) {
   .people-left,
   .people-right {
@@ -309,6 +327,8 @@ body {
 }
 .title-container h1{
   font-size:6rem;
+  background-color: #272727;
+  color: #EFEFEA;
 }
 
 #timeline {
@@ -360,7 +380,6 @@ body {
   color: #EFEFEA;
   width: 40%;
   padding: 5rem 5rem 3rem 3rem;
-  /* border-radius: 0px 10px 100px 0px; */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -444,13 +463,9 @@ justify-content: start;
 
 .timeline-image {
   width: 24rem;
-  /* height: auto; */
-  /* object-fit: contain;
-  position: relative;
-  z-index: 1; */
 }
 
-/* Responsive - TIMELINE */
+
 @media (max-width: 900px) {
   /* Hilangkan garis tengah timeline */
   #timeline::before {
@@ -469,13 +484,13 @@ justify-content: start;
 
   .timeline-container {
     width: 85%;
-    border-radius: 30px; /* semua sisi membulat */
+    border-radius: 30px;
     margin: 0 auto;
     padding: 2rem;
     position: relative;
   }
 
-  /* Ensure right-side timeline containers are also fully rounded on small screens */
+
   .timeline-item.right .timeline-container {
     border-radius: 30px;
   }
@@ -503,16 +518,16 @@ justify-content: start;
   .timeline-image {
     width: 12rem;
     max-width: 70%;
-    max-width: 100%; /* don't overflow the viewport */
+    max-width: 100%;
     height: auto;
   }
 
-  /* Hilangkan titik tengah */
+
   .timeline-item::before {
     display: none;
   }
 
-  /* Tombol tetap di tengah bawah */
+ 
   .button-conteiner {
     justify-content: center !important;
     margin-top: 1.5rem;
@@ -594,23 +609,6 @@ footer {
   -webkit-text-stroke: 2px #efefea;
 }
 
-.footer-right .social-links {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin: 2rem 0;
-}
-
-.footer-right .social-links img {
-  width: 40px;
-  filter: brightness(0) invert(1);
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.footer-right .social-links img:hover {
-  transform: scale(1.2);
-  filter: brightness(1.3);
-}
 
 .footer-right p {
   font-size: 1.1rem;
