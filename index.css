@@ -439,14 +439,15 @@ body {
   width: 100%;
   display: flex;
   margin-top: 1.5rem;
+ 
 }
 
 .timeline-item.left .button-container {
-  justify-content: flex-end;
+  justify-content: end;
 }
 
 .timeline-item.right .button-container {
-  justify-content: flex-start;
+  justify-content: start;
 }
 
 
@@ -525,6 +526,14 @@ body {
   .title-container h1{
     font-size: 2.7rem;
   }
+
+  .timeline-item.left .timeline-container {
+  border-radius:70px;
+}
+
+.timeline-item.right .timeline-container {
+ border-radius:70px;
+}
 }
 
 
